@@ -6,23 +6,28 @@ The **AirMouse** is a wrist-worn wireless mouse designed to control a computer c
 
 1. **Schematic & Component Selection:** Designed in KiCad using the Seeed Studio XIAO ESP32-C3 and MPU6050. Added three control buttons, a power switch, LiPo battery connector, status LED, resistors, and capacitors. Connected the MPU6050 to the microcontroller through the I²C bus and wired the button, power, and LED circuits.
 
-   ![AirMouse schematic](images/airmouse-schematic.png)
+    <img width="512" height="290" alt="schematic" src="https://github.com/user-attachments/assets/ed7c21fb-e374-4be6-92f1-7837df9ff853" />
+
 
 2. **Rules Checking & Footprints:** Corrected schematic power and pin issues, added appropriate No Connect markers and power flags, and completed KiCad Electrical Rules Check (ERC) with zero errors. Assigned physical footprints to the XIAO ESP32-C3, MPU6050, buttons, switch, LED, resistors, capacitors, and battery connector.
 
-   ![ERC and footprint assignment](images/airmouse-erc-footprints.png)
+     <img width="512" height="290" alt="image" src="https://github.com/user-attachments/assets/6e1f1c6b-5bcf-422c-a201-a17cefd62382" />
+
 
 3. **PCB Layout & Routing:** Arranged the XIAO ESP32-C3, MPU6050, control buttons, power switch, battery connector, LED circuit, and passive components on the PCB. Defined the board boundary using `Edge.Cuts`, routed power, ground, I²C, button, and LED traces, and corrected track-width issues until the configured Design Rules Check (DRC) reported zero violations and zero unconnected items.
 
-   ![AirMouse PCB layout](images/airmouse-pcb.png)
+   <img width="512" height="290" alt="PCB Layout" src="https://github.com/user-attachments/assets/a0889a03-4888-4b9c-89bf-da0a50c4c7ca" />
+
 
 4. **Manufacturing Preparation:** Added a GND copper zone on the `B.Cu` layer, generated the Gerber fabrication layers, inspected the exported files in Gerber Viewer, and exported a STEP model from KiCad’s 3D Viewer for mechanical visualization and future enclosure integration.
 
-   ![AirMouse Gerber and 3D view](images/airmouse-gerber-3d.png)
+   <img width="512" height="290" alt="image" src="https://github.com/user-attachments/assets/5925d399-2e87-4dc7-89a0-52fce226c3d2" />
+
 
 5. **Firmware Development:** Created the AirMouse firmware project in Visual Studio Code using PlatformIO. Selected the Seeed Studio XIAO ESP32-C3 board and Arduino framework, configured `platformio.ini`, added the BLE mouse and NimBLE dependencies, and successfully compiled the initial firmware project.
 
-   ![PlatformIO build](images/airmouse-platformio-build.png)
+   <img width="512" height="290" alt="image" src="https://github.com/user-attachments/assets/2bfe13e5-84f0-4c45-bd29-c02b6f972c03" />
+
 
 ## Key Features
 
@@ -76,14 +81,11 @@ AirMouse/
 │   ├── AirMouse.kicad_sch       # Schematic
 │   ├── AirMouse.kicad_pcb       # PCB layout
 │   ├── Gerbers/                  # Gerber and drill outputs
-│   └── 3D/
-│       └── AirMouse.step         # Exported STEP model
+│   
 ├── Firmware/
 │   ├── platformio.ini            # PlatformIO configuration
 │   └── src/
 │       └── main.cpp               # Firmware source
-├── Manufacturing/
-│   └── AirMouse_Gerbers.zip       # Fabrication archive (if created)
 ├── images/                         # Project screenshots
 └── README.md                       # Project documentation
 ```
