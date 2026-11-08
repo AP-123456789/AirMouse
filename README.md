@@ -40,25 +40,6 @@ The **AirMouse** is a wrist-worn wireless mouse designed to control a computer c
 - **Status Indication:** LED circuit for device status.
 - **Custom PCB Design:** KiCad PCB layout with routed traces, ground copper zone, and manufacturing outputs.
 
-## Bill of Materials (BOM)
-
-| **Item No.** | **Component Description** | **Qty** |
-|---|---|---:|
-| 1 | Seeed Studio XIAO ESP32-C3 | 1 |
-| 2 | MPU6050 IMU (QFN-24) | 1 |
-| 3 | Push buttons (left-click, right-click, cursor-enable) | 3 |
-| 4 | SMD power switch | 1 |
-| 5 | Status LED | 1 |
-| 6 | 4.7 kΩ resistors | 3 |
-| 7 | 1 kΩ resistor (LED current limiting) | 1 |
-| 8 | 100 nF capacitors | 2 |
-| 9 | 10 nF capacitor | 1 |
-| 10 | 2.2 nF capacitor | 1 |
-| 11 | Two-pin battery connector | 1 |
-| 12 | 3.7 V LiPo battery | 1 |
-
-*Component prices and supplier links are not included because procurement details have not yet been finalized. Verify the selected footprints and exact component packages against datasheets before ordering or fabrication.*
-
 ## Hardware Pinout and Schematic Mapping
 
 | **Microcontroller Pin** | **Connected Hardware Component** | **Signal / Net** | **Function** |
